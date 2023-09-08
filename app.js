@@ -12,10 +12,10 @@ switchTracker.addEventListener('click', () => {
 
 function changeSwitch(){
     if(body.classList.toggle("lightmode") === true){
-        switchButton.style.left = '16px'
+        switchButton.style.left = '0'
         img.setAttribute('src', './assets/avatar-light.png')
     }else{
-        switchButton.style.left = '-16px'
+        switchButton.style.left = '50%'
         img.setAttribute('src', './assets/avatar.png')
     }
 }

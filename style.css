@@ -60,10 +60,10 @@ CHANGER LIGHT-DARK MODE BUTTON
 */
 
 .switch-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 4px;
+    width: 64px;
+    height: 24px;
+    margin: 0 auto;
+    position: relative;
 }
 #switch-tracker{
     position: absolute;
@@ -79,23 +79,23 @@ CHANGER LIGHT-DARK MODE BUTTON
     cursor: pointer;
 }
 #switch-button{
-    position: relative;
+    position: absolute;
     z-index: 1;
 
     width: 32px;
     height: 32px;
+
+    top: 50%;
+    transform: translateY(-50%);
 
     border-radius: 50%;
     background: var(--switch-icon) no-repeat center, #fff;
     cursor: pointer;
     border: none;
     
-    left: 16px;
     transition: 300ms;
-
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.10);
 }
-
 
 /*
 LIST BUTTONS
@@ -178,7 +178,7 @@ MEDIA QUERIES
     :root{
         --bg-url: url(./assets/bg-desktop.jpg);
     }
-    .light{
+    .lightmode{
         --bg-url: url(./assets/bg-desktop-light.jpg);
     }
 }
