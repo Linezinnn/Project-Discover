@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--bg-url)
+}
+#container{
+    width: 100%;
+    max-width: 588px;
+    margin: 56px auto 0;
+}
+
+:root{
+    --text-color: #FFFFFF;
+    --stroke-color: #FFFFFF80;
+    --surface-color: #FFFFFF1A;
+    --surface-color-hover: #FFFFFF0D;
+    --highlight-color: #FFFFFF33;
+
+    --switch-icon: url(./assets/moon-stars.svg);
+    --bg-url: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+    
+    --text-md: 500 16px/24px 'Inter', sans-serif;
+    --text-sm: 400 14px/24px 'Inter', sans-serif;
+}
+.lightmode{
+    --text-color: #000000;
+    --stroke-color: #00000080;
+    --surface-color: #0000000D;
+    --surface-color-hover: #00000005;
+    --highlight-color: #0000001A;
+
+    --switch-icon: url(./assets/sun.svg);
+    --bg-url: url(./assets/bg-mobile-light.jpg) no-repeat top center/cover;
+
+    --text-md: 500 16px/24px 'Inter', sans-serif;
+    --text-sm: 400 14px/24px 'Inter', sans-serif;
+}
+/*
+PROFILE
+*/
+
+#profile{
+    text-align: center;
+    padding: 24px;
+}
+#profile img{
+    width: 112px;
+}
+#profile h1{
+    font: var(--text-md);
+    color: var(--text-color);
+}
+
+/*
+CHANGER LIGHT-DARK MODE BUTTON
+*/
+
+.switch-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+#switch-tracker{
+    position: absolute;
+
+    width: 64px;
+    height: 24px;
+
+    border: 1px solid var(--stroke-color);
+    background: var(--surface-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 999px;
+    cursor: pointer;
+}
+#switch-button{
+    position: relative;
+    z-index: 1;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    background: var(--switch-icon) no-repeat center, #fff;
+    cursor: pointer;
+    border: none;
+    
+    left: 16px;
+    transition: 300ms;
+
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.10);
+}
+
+
+/*
+LIST BUTTONS
+*/
+
+#list-buttons{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+#list-buttons li{
+    list-style: none;
+}
+#list-buttons a{
+    text-decoration: none;
+    font: var(--text-md);
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+    padding: 16px 24px;
+    border-radius: 8px;
+    border: 1px solid var(--stroke-color);
+    background: var(--surface-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: background 200ms;
+}
+#list-buttons a:hover{
+    border: 1.5px solid var(--text-color);
+    background: var(--surface-color-hover);
+}
+
+/*
+SOCIAL MIDIAS
+*/
+
+#social-medias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+#social-medias a{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 150ms;
+}
+#social-medias a:hover{
+    cursor: pointer;
+    background-color: var(--highlight-color);
+}
+#social-medias ion-icon{
+    color: var(--text-color);
+    font-size: 24px;
+}
+
+/*
+FOOTER
+*/
+
+footer{
+    padding: 24px;
+    text-align: center;
+}
+footer h2, a{
+    color: var(--text-color);
+    font: var(--text-sm);
+}
