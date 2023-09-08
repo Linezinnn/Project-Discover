@@ -96,6 +96,9 @@ CHANGER LIGHT-DARK MODE BUTTON
     transition: 300ms;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.10);
 }
+#switch-button:hover{
+    outline: 8px solid var(--highlight-color);
+}
 
 /*
 LIST BUTTONS
